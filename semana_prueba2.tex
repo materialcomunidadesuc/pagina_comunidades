@@ -1,0 +1,224 @@
+\documentclass[letter,14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{draftwatermark}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[overlay,remember picture]
+\color{amarillo}
+\draw[line width=14pt]
+    ($ (current page.north west) + (0.05cm,-0.1cm) $)
+    rectangle
+    ($ (current page.south east) + (-0.15cm,0.15cm) $);
+\end{tikzpicture}
+}
+
+\setmainfont[Ligatures=TeX]{Montserrat-Light.ttf}
+\newfontfamily\normalfont[Ligatures=TeX]{Montserrat-Light.ttf}
+\newfontfamily\italicafont[Ligatures=TeX]{Montserrat-LightItalic.ttf}
+\newfontfamily\mediumfont[Ligatures=TeX]{Montserrat-Medium.ttf}
+\newfontfamily\negritafont[Ligatures=TeX]{Montserrat-Regular.ttf}
+\newfontfamily\negritaitalicafont[Ligatures=TeX]{Montserrat-Italic.ttf}
+\newfontfamily\longreachfont[Ligatures=TeX]{Longreach.otf}
+
+\DeclareTextFontCommand{\normal}{\normalfont}
+\DeclareTextFontCommand{\italica}{\italicafont}
+\DeclareTextFontCommand{\medium}{\mediumfont}
+\DeclareTextFontCommand{\negrita}{\negritafont}
+\DeclareTextFontCommand{\negritaitalica}{\negritaitalicafont}
+\DeclareTextFontCommand{\longreach}{\longreachfont}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\usepackage{etoolbox}
+
+\newcommand{\footnotetextnumbering}{\alph{footnote}}
+\makeatletter
+\patchcmd{\footnote}% <cmd>
+  {\@footnotemark}% <search>
+  {\protected@xdef\@thefntextmark{\footnotetextnumbering}%
+    \@footnotemark}% <replace>
+  {}{}% <success><failure>
+\def\@makefntextmark{\hbox{\@textsuperscript{\normalfont\@thefntextmark}}}
+\patchcmd{\@makefntext}{\@makefnmark}{\@makefntextmark}{}{}
+\makeatother
+
+
+\definecolor{amarillo}{RGB}{245,184,12}
+\pagenumbering{gobble}
+\setlength{\arrayrulewidth}{4pt}
+
+\SetWatermarkText{\includegraphics[angle=-45]{Logo.png}}
+\SetWatermarkScale{0.7}
+\SetWatermarkLightness{1}
+
+\usepackage[spanish]{babel}
+\usepackage[spanish]{translator}    
+
+\deftranslation[to=spanish]{January}{Enero}
+\deftranslation[to=spanish]{February}{Febrero}
+\deftranslation[to=spanish]{March}{Marzo}
+\deftranslation[to=spanish]{April}{Abril}
+\deftranslation[to=spanish]{May}{Mayo}
+\deftranslation[to=spanish]{June}{Junio}
+\deftranslation[to=spanish]{July}{Julio}
+\deftranslation[to=spanish]{August}{Agosto}
+\deftranslation[to=spanish]{September}{Septiembre}
+\deftranslation[to=spanish]{October}{Octubre}
+\deftranslation[to=spanish]{November}{Noviembre}
+\deftranslation[to=spanish]{December}{Diciembre}
+\deftranslation[to=spanish]{Mon}{Lun}
+\deftranslation[to=spanish]{Tue}{Mar}
+\deftranslation[to=spanish]{Wed}{Mié}
+\deftranslation[to=spanish]{Thu}{Jue}
+\deftranslation[to=spanish]{Fri}{Vie}
+\deftranslation[to=spanish]{Sat}{Sab}
+\deftranslation[to=spanish]{Sun}{Dom}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{calendar}
+% \renewcommand*\familydefault{\sfdefault}
+
+% User defined
+
+\begin{document}
+
+\pagecolor{white}
+
+\begin{center}
+    \fontsize{50}{60}\selectfont {\color{amarillo}\longreach{Pauta guía de comunidad}}
+\end{center}
+
+\hfill \\ \hfill
+{\medium{Estructura}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/1_estructura.tex}}
+
+\hfill \\ \hfill
+{\medium{Oración Inicial}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/2_oracion_inicial.tex}}
+
+\hfill \\ \hfill
+{\medium{Motivación al Evangelio}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/3_motivacion.tex}}
+
+\newpage
+{\noindent \medium{Evangelio}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/4_evangelio.tex}}
+
+\hfill \\ \hfill
+{\medium{Actividades}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/5_actividades.tex}}
+
+\hfill \\ \hfill
+{\medium{Propósito Comunitario}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/6_proposito.tex}}
+
+\hfill \\ \hfill
+{\medium{Oración Final}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/7_oracion_final.tex}}
+
+\newpage
+\begin{center}
+    \fontsize{50}{60}\selectfont {\color{amarillo}\longreach{Anexos}}
+\end{center}
+% \hfill \\ \hfill
+\normal{\input{semana_prueba2/8_anexos.tex}}
+
+\def\iyear{2020} % Año de inicio
+\def\fyear{2020} % Año de fin
+\def\imonth{11} % Mes de inicio
+\def\iday{3} % Día de inicio
+\def\fmonth{11} % Mes de fin
+\def\fday{10} % Día de fin
+
+\def\lunes{\\} % Lo que va el día lunes
+\def\martes{\\} % Lo que va el día martes
+\def\miercoles{\\} % Lo que va el día miércoles
+\def\jueves{\\} % Lo que va el día jueves
+\def\viernes{\\} % Lo que va el día viernes
+\def\sabado{\\} % Lo que va el día sábado
+\def\domingo{\\} % Lo que va el día domingo
+
+\hfill \\ hfill
+{\medium{Esta semana}}
+{\color{amarillo} \vspace{4pt} \hrule height 4pt }
+\hfill \\ \hfill
+\normal{\input{semana_prueba2/9_calendario.tex}}
+
+\begin{center}
+\hspace*{-0.5cm}
+\begin{tikzpicture}[every day/.style={anchor = north}, font=\fontsize{12}{15}\selectfont]
+\calendar[
+  dates=\iyear-\imonth-\iday to \fyear-\fmonth-\fday,
+%   dates=\iyear-10-07 to \fyear-10-13,
+  name=cal,
+  day yshift = 3em,
+  day code=
+  {
+    \node[name=\pgfcalendarsuggestedname,every day,shape=rectangle,
+    minimum height= 2.3cm, text width = 2.3cm, draw = gray, text depth = 2.4 cm]{
+    \ifdate{Monday}{\normal{lunes}}{}\ifdate{Tuesday}{\normal{\martes}}{}\ifdate{Wednesday}{\normal{\miercoles}}{}\ifdate{Thursday}{\normal{\jueves}}{}\ifdate{Friday}{\normal{\viernes}}{}\ifdate{Saturday}{\normal{\sabado}}{}\ifdate{Sunday}{\normal{\domingo}}{}};
+    \draw (-1.8cm, -.1ex) node[anchor = west]{};
+  },
+  execute before day scope=
+  {
+    \ifdate{workday}
+    {
+      % Shift right
+      \tikzset{every day/.style={fill=white}}
+      \pgftransformxshift{2.6cm}
+      % Print month name 
+      \draw (0,0)node [shape=rectangle, minimum height= .53cm,
+        text width = 2.3cm, fill = amarillo, text= black, draw = amarillo, text centered]
+        {\fontsize{12}{15}\selectfont\negritafont\pgfcalendarweekdayshortname{\pgfcalendarcurrentweekday} \tikzdaytext};
+    }{}
+    \ifdate{Saturday}{
+      % Shift right
+      \pgftransformxshift{2.6cm}
+      % Print month name 
+      \draw (0,0)node [shape=rectangle, minimum height= .53cm,
+        text width = 2.3cm, fill = amarillo, text= black, draw = amarillo, text centered]
+        {\fontsize{12}{15}\selectfont\negritafont\pgfcalendarweekdayshortname{\pgfcalendarcurrentweekday} \tikzdaytext};
+    \tikzset{every day/.style={fill=amarillo!10}}}{}
+    \ifdate{Sunday}{
+      % Shift right
+      \pgftransformxshift{2.6cm}
+      % Print month name 
+      \draw (0,0)node [shape=rectangle, minimum height= .53cm,
+        text width = 2.3cm, fill = amarillo, text= black, draw = amarillo, text centered]
+        {\fontsize{12}{15}\selectfont\negritafont\pgfcalendarweekdayshortname{\pgfcalendarcurrentweekday} \tikzdaytext};
+    \tikzset{every day/.style={fill=amarillo!20}}}{}
+  },
+  execute at begin day scope=
+  {
+    % each day is shifted down according to the day of month
+    \pgftransformyshift{-1.8 cm}
+  }
+];
+\end{tikzpicture}
+
+\end{center}
+
+\end{document}

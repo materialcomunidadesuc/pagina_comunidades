@@ -1,0 +1,167 @@
+<%= form_with(model: template, local: true) do |form| %>
+  <% if template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(template.errors.count, "error") %> prohibited this template from being saved:</h2>
+
+      <ul>
+      <% template.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :template_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :structure %>
+    <%= form.text_area :structure, id: :template_structure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_prayer %>
+    <%= form.text_area :initial_prayer, id: :template_initial_prayer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :motivation %>
+    <%= form.text_area :motivation, id: :template_motivation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gospel %>
+    <%= form.text_area :gospel, id: :template_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activities %>
+    <%= form.text_area :activities, id: :template_activities %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purpose %>
+    <%= form.text_area :purpose, id: :template_purpose %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final_prayer %>
+    <%= form.text_area :final_prayer, id: :template_final_prayer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :annexed %>
+    <%= form.text_area :annexed, id: :template_annexed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :calendar %>
+    <%= form.text_area :calendar, id: :template_calendar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_year %>
+    <%= form.number_field :initial_year, id: :template_initial_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_month %>
+    <%= form.number_field :initial_month, id: :template_initial_month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial_day %>
+    <%= form.number_field :initial_day, id: :template_initial_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final_year %>
+    <%= form.number_field :final_year, id: :template_final_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final_month %>
+    <%= form.number_field :final_month, id: :template_final_month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final_day %>
+    <%= form.number_field :final_day, id: :template_final_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monday_gospel %>
+    <%= form.text_field :monday_gospel, id: :template_monday_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monday_saints %>
+    <%= form.text_field :monday_saints, id: :template_monday_saints %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tuesday_gospel %>
+    <%= form.text_field :tuesday_gospel, id: :template_tuesday_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tuesday_saints %>
+    <%= form.text_field :tuesday_saints, id: :template_tuesday_saints %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wednesday_gospel %>
+    <%= form.text_field :wednesday_gospel, id: :template_wednesday_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wednesday_saints %>
+    <%= form.text_field :wednesday_saints, id: :template_wednesday_saints %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thursday_gospel %>
+    <%= form.text_field :thursday_gospel, id: :template_thursday_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thursday_saints %>
+    <%= form.text_field :thursday_saints, id: :template_thursday_saints %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friday_gospel %>
+    <%= form.text_field :friday_gospel, id: :template_friday_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friday_saints %>
+    <%= form.text_field :friday_saints, id: :template_friday_saints %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saturday_gospel %>
+    <%= form.text_field :saturday_gospel, id: :template_saturday_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saturday_saints %>
+    <%= form.text_field :saturday_saints, id: :template_saturday_saints %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sunday_gospel %>
+    <%= form.text_field :sunday_gospel, id: :template_sunday_gospel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sunday_saints %>
+    <%= form.text_field :sunday_saints, id: :template_sunday_saints %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

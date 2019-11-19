@@ -1,0 +1,2 @@
+json.extract! template, :id, :structure, :initial_prayer, :motivation, :gospel, :activities, :purpose, :final_prayer, :annexed, :calendar, :initial_year, :initial_month, :initial_day, :final_year, :final_month, :final_day, :monday_gospel, :monday_saints, :tuesday_gospel, :tuesday_saints, :wednesday_gospel, :wednesday_saints, :thursday_gospel, :thursday_saints, :friday_gospel, :friday_saints, :saturday_gospel, :saturday_saints, :sunday_gospel, :sunday_saints, :created_at, :updated_at
+json.url template_url(template, format: :json)

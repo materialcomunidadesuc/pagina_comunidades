@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  structure: MyText
+  initial_prayer: MyText
+  motivation: MyText
+  gospel: MyText
+  activities: MyText
+  purpose: MyText
+  final_prayer: MyText
+  annexed: MyText
+  calendar: MyText
+  initial_year: 1
+  initial_month: 1
+  initial_day: 1
+  final_year: 1
+  final_month: 1
+  final_day: 1
+  monday_gospel: MyString
+  monday_saints: MyString
+  tuesday_gospel: MyString
+  tuesday_saints: MyString
+  wednesday_gospel: MyString
+  wednesday_saints: MyString
+  thursday_gospel: MyString
+  thursday_saints: MyString
+  friday_gospel: MyString
+  friday_saints: MyString
+  saturday_gospel: MyString
+  saturday_saints: MyString
+  sunday_gospel: MyString
+  sunday_saints: MyString
+
+two:
+  structure: MyText
+  initial_prayer: MyText
+  motivation: MyText
+  gospel: MyText
+  activities: MyText
+  purpose: MyText
+  final_prayer: MyText
+  annexed: MyText
+  calendar: MyText
+  initial_year: 1
+  initial_month: 1
+  initial_day: 1
+  final_year: 1
+  final_month: 1
+  final_day: 1
+  monday_gospel: MyString
+  monday_saints: MyString
+  tuesday_gospel: MyString
+  tuesday_saints: MyString
+  wednesday_gospel: MyString
+  wednesday_saints: MyString
+  thursday_gospel: MyString
+  thursday_saints: MyString
+  friday_gospel: MyString
+  friday_saints: MyString
+  saturday_gospel: MyString
+  saturday_saints: MyString
+  sunday_gospel: MyString
+  sunday_saints: MyString
